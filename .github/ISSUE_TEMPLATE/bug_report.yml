@@ -1,0 +1,86 @@
+name: 🐛 Bug report
+description: Something in CloudKit-kt behaves differently than it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. **Remove any API tokens, web
+        auth tokens or private keys** from logs before posting.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before reporting
+      options:
+        - label: I searched the existing issues and this is not a duplicate.
+          required: true
+        - label: I am using the latest version of CloudKit-kt.
+          required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected to see instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A minimal snippet is ideal.
+      render: kotlin
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen
+      options:
+        - Records and queries
+        - Field values / record DSL
+        - Incremental sync
+        - Zones and subscriptions
+        - Assets
+        - Sharing
+        - Users / identity
+        - Notifications
+        - Authentication (API token / sign-in)
+        - Authentication (server-to-server keys)
+        - Android sign-in or PreferencesStore
+        - Build or dependency
+        - Somewhere else / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: CloudKit-kt version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: Android version and device, or JVM version.
+      placeholder: "Android 16, Pixel 9 / JDK 21"
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error or logs
+      description: The `CloudKitException` (serverErrorCode, reason) or stack trace.
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
