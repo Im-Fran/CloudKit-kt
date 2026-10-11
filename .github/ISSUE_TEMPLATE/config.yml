@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/Im-Fran/CloudKit-kt/security/advisories/new
+    about: Please report vulnerabilities privately, never as a public issue.
+  - name: 📖 CloudKit Web Services reference
+    url: https://developer.apple.com/library/archive/documentation/DataManagement/Conceptual/CloudKitWebServicesReference/
+    about: Questions about CloudKit itself rather than this library.

@@ -1,0 +1,45 @@
+name: ✨ Feature request
+description: Suggest a missing endpoint, API or behaviour.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        CloudKit-kt mirrors CloudKit JS on top of CloudKit Web Services. Requests
+        that map to an existing Web Services endpoint or CloudKit JS API are the
+        easiest to land.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before requesting
+      options:
+        - label: I searched the existing issues and this is not a duplicate.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is missing
+      description: The problem you hit, not the solution you have in mind.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like instead
+    validations:
+      required: true
+
+  - type: input
+    id: reference
+    attributes:
+      label: CloudKit JS / Web Services reference
+      description: The CloudKit JS API or Web Services endpoint it corresponds to, if any.
+      placeholder: "CloudKit.Database.fetchRecordZoneChanges / changes/zone"
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
